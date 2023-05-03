@@ -6,34 +6,775 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-<div id="app">
-    <p><b>Nombre:</b> Nicolás Mafla Checa</p>
-    <p><b>URL</b> <a href="https://js-8ojvof.stackblitz.io" target="_blank">https://js-8ojvof.stackblitz.io</a></p>
-    <p><b>GitHub</b> <a href="https://github.com/NicolasMafla/08MBID---Visualizacion-de-Datos"
-                        target="_blank">https://github.com/NicolasMafla/08MBID---Visualizacion-de-Datos</a></p>
+<div id="app" class="container">
+    <h1 class="display-1 my-2">Tiroteos U.S.A 1980-2023</h1>
+    <div class="card my-2">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Autor:</b> Nicolás Mafla Checa</li>
+            <li class="list-group-item"><b>URL: </b> <a href="https://js-ccycyn.stackblitz.io" target="_blank">https://js-ccycyn.stackblitz.io</a>
+            </li>
+            <li class="list-group-item"><b>GitHub: </b> <a
+                    href="https://github.com/NicolasMafla/08MBID---Visualizacion-de-Datos/tree/project"
+                    target="_blank">https://github.com/NicolasMafla/08MBID---Visualizacion-de-Datos/tree/project</a>
+            </li>
+            <li class="list-group-item"><b>Tecnologías: </b> <a
+                    href="https://plotly.com/"
+                    target="_blank">Plotly</a>, <a
+                    href="https://www.python.org/"
+                    target="_blank">Python</a>,
+                <a
+                        href="https://cloud.google.com/datastudio?hl=es-419"
+                        target="_blank">Google Data Studio</a>,
+                        <a
+                    href="https://getbootstrap.com/"
+                    target="_blank">Bootstrap</a>
+            </li>
+            <li class="list-group-item"><b>Data: </b> <a
+                    href="https://www.kaggle.com/datasets/nidzsharma/us-mass-shootings-19822023"
+                    target="_blank">https://www.kaggle.com/datasets/nidzsharma/us-mass-shootings-19822023</a>
+            </li>
+        </ul>
+    </div>
+    <h2 class="display-4 my-3">Introducción</h2>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text" style="text-align: justify;">Los tiroteos son un fenómeno complejo y multifacético que
+                ha afectado a los Estados Unidos durante décadas, estos eventos pueden ocurrir en diferentes contextos,
+                desde tiroteos masivos en lugares públicos como escuelas, iglesias o centros comerciales, hasta tiroteos
+                entre delincuentes, hogares o policiales. En general, la violencia armada y los tiroteos han sido objeto
+                de un intenso debate y controversia en Estados Unidos, y han llevado a la promulgación de leyes y
+                políticas de control de armas. Sin embargo, la eficacia de estas medidas sigue siendo objeto de
+                discusión, y el número de tiroteos en Estados Unidos se ha incrementado los últimos años según la <a
+                        href="https://www.bbc.com/news/world-us-canada-64377360" target="_blank">BBC</a>.</p>
 
-    <h1>Gráficos de ejemplo</h1>
-    <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQtT-aDXsgDVxJK1WBr9mgtUTco3WxSnfYKtGZkIg4Jh98oI9rCyRctubKJix6VjXHmpsKISVGkW9YD/pubchart?oid=1251463679&amp;format=interactive"></iframe>
-    <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQtT-aDXsgDVxJK1WBr9mgtUTco3WxSnfYKtGZkIg4Jh98oI9rCyRctubKJix6VjXHmpsKISVGkW9YD/pubchart?oid=350103192&amp;format=interactive"></iframe>
-    <iframe title="CO2 Comparación" aria-label="Scatter Plot" id="datawrapper-chart-COGp6"
-            src="https://datawrapper.dwcdn.net/COGp6/3/" scrolling="no" frameborder="0" style="border: none;"
-            width="600" height="400" data-external="1"></iframe>
+            <p class="card-text" style="text-align: justify;"> A través del análisis y la visualización de estos datos,
+                podemos explorar patrones y tendencias a lo largo del tiempo, identificar las regiones más afectadas por
+                la violencia armada y examinar la relación entre los tiroteos y factores como la edad, el género y el
+                tipo de arma utilizada. Para la elaboración de este proyecto de visualización de datos, se han utilziado
+                las siguientes herramientas populares: Plotly y Google Data Studio para crear gráficos
+                interactivos y mapas que nos permitan explorar y entender mejor la información del problema social que
+                afecta a una de las potencias mundiales.</p>
+        </div>
+    </div>
+    <h2 class="display-4 my-3">Datos utilzados</h2>
+    <div class="card">
+      <div class="card-body">
+          <p class="card-text" style="text-align: justify;">El conjunto de datos utilizado en este proyecto es de Kaggle, y se trata de una recopilación de tiroteos ocurridos en Estados Unidos desde 1982 a 2023. El conjunto de datos contiene información detallada sobre cada tiroteo, incluyendo la ubicación, fecha, número de víctimas, tipo de arma utilizada y descripción del suceso.</p>
 
-    <h1>Actividad guiada 1</h1>
-    <h2>Gráfico 1</h2>
-    <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQtT-aDXsgDVxJK1WBr9mgtUTco3WxSnfYKtGZkIg4Jh98oI9rCyRctubKJix6VjXHmpsKISVGkW9YD/pubchart?oid=1387385144&amp;format=interactive"></iframe>
-    <h2>Gráfico 2</h2>
-    <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQtT-aDXsgDVxJK1WBr9mgtUTco3WxSnfYKtGZkIg4Jh98oI9rCyRctubKJix6VjXHmpsKISVGkW9YD/pubchart?oid=1488099921&amp;format=interactive"></iframe>
-    <h2>Gráfico 3</h2>
-    <iframe title="Top 10 Emisiones CO2 en 2018" aria-label="Bar Chart" id="datawrapper-chart-1LGuh"
-            src="https://datawrapper.dwcdn.net/1LGuh/3/" scrolling="no" frameborder="0" style="border: none;"
-            width="600" height="353" data-external="1"></iframe>
+          <p class="card-text" style="text-align: justify;"> Kaggle es una plataforma en línea de ciencia de datos que permite a los investigadores, científicos y entusiastas de la tecnología colaborar, compartir y descubrir conjuntos de datos, así como también participar en competiciones de ciencia de datos y proyectos de aprendizaje automático. La plataforma también proporciona herramientas de análisis de datos y machine learning para ayudar a los usuarios a comprender mejor los datos y extraer información valiosa.</p>
+      </div>
+      <div id="f83626a0-54be-49b4-b2c6-2669d37603b7" class="plotly-graph-div" style="height:100%; width:100%;"></div>   
+  </div>
+    <h2 class="display-4 my-3">Metodología</h2>
+    <div class="card">
+      <div class="card-body">
+          <p class="card-text" style="text-align: justify;">
+            En total se crearon 4 gráficos dinámicos representando información relevante acerca de los tiroteos en relación a dimensiones como ubicación, evolución en el tiempo, distribución y características de los asesinos. Los gráficos fueron los siguientes:
+            <li><b>Mapa con gráfico de puntos: </b> Se creó un mapa en el que se añadio un scatter plot ya que se contaba con la latitud y longitud exacta de cada uno de los tiroteos.</li>
+            <li><b>Evolución en el tiempo: </b> Se creó un gráfico de linea para series de tiempo ya que se contaba con el año en que ocurrió cada tiroteo. </li>
+            <li><b>Lugares de los tiroteos: </b> gg </li>
+            <li><b>Edad de los asesinos: </b> gg </li>
+          </p>
+      </div>
+  </div>
+    <h2 class="display-4 my-3">Gráficos</h2>
+    <div id="7eab35f2-593b-4eac-8d16-69d8f176131c" class="plotly-graph-div" style="height:100%; width:100%;"></div>
+    <div id="779ffa0a-82bf-4c84-986f-e43c121a696f" class="plotly-graph-div" style="height:100%; width:100%;"></div>
 </div>
+<script type="text/javascript">                                    window.PLOTLYENV = window.PLOTLYENV || {};
+if (document.getElementById("7eab35f2-593b-4eac-8d16-69d8f176131c")) {
+    Plotly.newPlot("7eab35f2-593b-4eac-8d16-69d8f176131c", [{
+        "hovertemplate": "<b>%{hovertext}</b><br><br>type=Mass<br>fatalities=%{marker.size}<br>latitude=%{lat}<br>longitude=%{lon}<extra></extra>",
+        "hovertext": ["Nashville religious school shooting", "Michigan State University shooting", "LA dance studio mass shooting", "Virginia Walmart shooting", "LGBTQ club shooting", "University of Virginia shooting", "Greenwood Park Mall shooting", "Highland Park July 4 parade shooting", "Church potluck dinner shooting", "Concrete company shooting", "Tulsa medical center shooting", "Robb Elementary School massacre", "Buffalo supermarket massacre", "Sacramento County church shooting", "Oxford High School shooting", "San Jose VTA shooting", "FedEx warehouse shooting", "Orange office complex shooting", "Boulder supermarket shooting", "Springfield convenience store shooting", "Molson Coors shooting", "Pensacola Naval base shooting", "Dayton entertainment district shooting", "El Paso Walmart mass shooting", "Gilroy garlic festival shooting", "Virginia Beach municipal building shooting", "Harry Pratt Co. warehouse shooting", "SunTrust bank shooting", "Mercy Hospital shooting", "Thousand Oaks nightclub shooting", "Tree of Life synagogue shooting", "Rite Aid warehouse shooting", "Fifth Third Center shooting", "Capital Gazette shooting", "Santa Fe High School shooting", "Waffle House shooting", "Yountville veterans home shooting", "Marjory Stoneman Douglas High School shooting", "Pennsylvania carwash shooting", "Texas First Baptist Church massacre", "Walmart shooting in suburban Denver", "Edgewood businees park shooting", "Las Vegas Strip massacre", "San Francisco UPS shooting", "Pennsylvania supermarket shooting", "Florida awning manufacturer shooting", "Rural Ohio nursing home shooting", "Fresno downtown shooting", "Fort Lauderdale airport shooting", "Cascade Mall shooting", "Dallas police shooting", "Orlando nightclub massacre", "Excel Industries mass shooting", "Kalamazoo shooting spree", "San Bernardino mass shooting", "Planned Parenthood clinic", "Colorado Springs shooting rampage", "Umpqua Community College shooting", "Chattanooga military recruitment center", "Charleston Church Shooting", "Trestle Trail bridge shooting", "Marysville-Pilchuck High School shooting", "Isla Vista mass murder", "Fort Hood shooting 2", "Washington Navy Yard shooting", "Hialeah apartment shooting", "Santa Monica rampage", "Pinewood Village Apartment shooting", "Mohawk Valley shootings", "Sandy Hook Elementary massacre", "Accent Signage Systems shooting", "Sikh temple shooting", "Seattle cafe shooting", "Oikos University killings", "Su Jung Health Sauna shooting", "Seal Beach shooting", "IHOP shooting", "Tucson shooting", "Hartford Beer Distributor shooting", "Coffee shop police killings", "Fort Hood massacre", "Binghamton shootings", "Carthage nursing home shooting", "Northern Illinois University shooting", "Kirkwood City Council shooting", "Crandon shooting", "Virginia Tech massacre", "Trolley Square shooting", "Amish school shooting", "Capitol Hill massacre", "Goleta postal shootings", "Red Lake massacre", "Damageplan show shooting", "Lockheed Martin shooting", "Navistar shooting", "Wakefield massacre", "Wedgwood Baptist Church shooting", "Atlanta day trading spree killings", "Columbine High School massacre", "Thurston High School shooting", "Westside Middle School killings", "Connecticut Lottery shooting", "R.E. Phelon Company shooting", "Walter Rossler Company massacre", "Air Force base shooting", "Chuck E. Cheese's killings", "Luigi's shooting", "101 California Street shootings", "Watkins Glen killings", "Lindhurst High School shooting", "Royal Oak postal shootings", "Luby's massacre", "GMAC massacre", "Standard Gravure shooting", "Stockton schoolyard shooting", "ESL shooting", "United States Postal Service shooting", "San Ysidro McDonald's massacre", "Dallas nightclub shooting", "Welding shop shooting"],
+        "lat": [null, null, null, null, null, null, null, null, null, null, null, null, null, 38.60111019, 42.84410784, 37.316097, 39.68663, 33.83542, 39.986961, 37.210432, 43.044511, 30.364707, 39.757312, 31.771068, 36.997191, 36.75442, 41.753725, 27.471043, 41.847667, 34.176946, 40.443898, 39.455658, 39.101981, 38.994548, 29.392825, 36.052521, 38.392496, 26.30483, 40.052151, 29.273282, 39.876374, 39.452189, 36.095739, 37.765947, 41.529546, 28.580295, 39.959034, 36.746378, 26.072751, 48.461367, 32.7801052, 28.519718, 38.135992, 42.236689, 34.075961, 38.881031, 38.83755, 43.289538, 35.047157, 32.788387, 44.204124, 48.050824, 34.436283, 31.141716, 38.874981, 25.864338, 34.008617, 47.3129607, 43.045601, 41.4123225, 44.977425, 42.8858503, 47.6038321, 37.8043808, 33.9412127, 33.741176, 39.1637984, 32.335941, 41.798764, 47.15277, 31.135557, 42.099802, 35.333434, 41.9294736, 38.580093, 45.5719072, 37.2295733, 40.7606467, 39.9589, 47.6229, 34.425571, 47.876346, 39.9622601, 32.410842, 41.908163, 42.500429, 32.664511, 33.850116, 39.604034, 44.0462362, 35.8209895, 41.6856325, 33.5598586, 27.828025, 47.61864486, 39.675599, 35.0529931, 37.792968, 42.3810555, 39.07868761, 42.4894801, 31.1171194, 30.3321838, 38.2542376, 37.9577016, 37.3688301, 35.6672015, 32.5520013, 32.925166, 25.796491],
+        "legendgroup": "Mass",
+        "lon": [null, null, null, null, null, null, null, null, null, null, null, null, null, -121.4189659, -83.25992831, -121.888533, -86.32313, -117.85379, -105.251168, -93.23686, -87.962537, -87.288567, -84.184947, -106.375655, -121.584819, -76.060378, -88.331057, -81.45847, -87.622009, -118.874793, -79.921398, -76.208485, -84.511782, -76.543657, -95.141972, -86.616944, -122.366528, -80.269511, -79.389166, -98.056488, -104.986132, -76.309988, -115.171544, -122.406087, -75.94722, -81.294086, -82.596508, -119.800319, -80.143382, -122.337918, -96.8000082, -81.376777, -97.425145, -85.674795, -117.27789, -104.849057, -104.814251, -123.333193, -85.311819, -79.933143, -88.467541, -122.176918, -119.8714406, -97.777559, -76.99453, -80.311775, -118.494754, -122.3393665, -74.984891, -73.31142358, -93.310408, -87.8631362, -122.3300624, -122.2708166, -84.2135309, -118.1046356, -119.7674034, -110.975132, -72.570068, -122.467308, -97.783664, -75.917723, -79.414592, -88.7503647, -90.40691, -88.9028922, -80.4139393, -111.89109, -76.0806, -122.3165, -119.866069, -95.0169401, -83.0007065, -88.634539, -87.879908, -71.075913, -97.384246, -84.377839, -105.074103, -123.0220289, -90.6682606, -72.72983827, -81.721952, -97.548198, -117.6483587, -104.844845, -78.8787058, -122.397973, -76.8705777, -121.5475762, -83.1446485, -97.7277959, -81.655651, -85.759407, -121.2907796, -122.0363496, -97.42937037, -117.0430813, -96.838676, -80.226683],
+        "marker": {
+            "color": "#636efa",
+            "size": [6.0, 3.0, 11.0, 6.0, 5.0, 3.0, 3.0, 7.0, 3.0, 3.0, 4.0, 21.0, 10.0, 4.0, 4.0, 9.0, 8.0, 4.0, 10.0, 4.0, 5.0, 3.0, 9.0, 22.0, 3.0, 12.0, 5.0, 5.0, 3.0, 12.0, 11.0, 3.0, 3.0, 5.0, 10.0, 4.0, 3.0, 17.0, 4.0, 26.0, 3.0, 3.0, 58.0, 3.0, 3.0, 5.0, 3.0, 3.0, 5.0, 5.0, 5.0, 49.0, 3.0, 6.0, 14.0, 3.0, 3.0, 9.0, 5.0, 9.0, 3.0, 5.0, 6.0, 3.0, 12.0, 7.0, 6.0, 5.0, 5.0, 27.0, 7.0, 7.0, 6.0, 7.0, 5.0, 8.0, 5.0, 6.0, 9.0, 4.0, 13.0, 14.0, 8.0, 5.0, 6.0, 6.0, 32.0, 6.0, 6.0, 7.0, 8.0, 10.0, 5.0, 7.0, 5.0, 7.0, 8.0, 9.0, 13.0, 4.0, 5.0, 5.0, 4.0, 6.0, 5.0, 4.0, 4.0, 9.0, 5.0, 4.0, 5.0, 24.0, 10.0, 9.0, 6.0, 7.0, 15.0, 22.0, 6.0, 8.0],
+            "sizemode": "area",
+            "sizeref": 0.145
+        },
+        "mode": "markers",
+        "name": "Mass",
+        "showlegend": true,
+        "subplot": "mapbox",
+        "type": "scattermapbox"
+    }, {
+        "hovertemplate": "<b>%{hovertext}</b><br><br>type=Spree<br>fatalities=%{marker.size}<br>latitude=%{lat}<br>longitude=%{lon}<extra></extra>",
+        "hovertext": ["Half Moon Bay spree shooting", "Raleigh spree shooting", "Atlanta massage parlor shootings", "Jersey City kosher market shooting", "Odessa-Midland shooting spree", "Pennsylvania hotel bar shooting", "T&T Trucking shooting", "Rancho Tehama shooting spree", "Baton Rouge police shooting", "Alturas tribal shooting", "Aurora theater shooting", "Atlantis Plastics shooting", "Westroads Mall shooting", "Living Church of God shooting", "Hotel shooting", "Caltrans maintenance yard shooting", "Fort Lauderdale revenge shooting", "Long Island Rail Road massacre", "University of Iowa shooting", "Shopping centers spree killings"],
+        "lat": [null, null, 34.111653, 40.707363, 31.925974, 40.785142, 35.349388, 40.018759, 30.433601, 41.487104, 39.706038, 37.76721, 41.265719, 43.0605671, 27.966479, 33.7877944, 26.119269, 40.7267682, 41.6606893, 28.0331886],
+        "legendgroup": "Spree",
+        "lon": [null, null, -84.580376, -74.083609, -102.2796, -77.839411, -118.916335, -122.393089, -91.081403, -120.542237, -104.820594, -87.5573742, -96.067495, -88.1064787, -82.570586, -117.8531119, -80.104119, -73.6342955, -91.5302214, -80.6429695],
+        "marker": {
+            "color": "#EF553B",
+            "size": [7.0, 5.0, 8.0, 4.0, 7.0, 3.0, 5.0, 5.0, 3.0, 4.0, 12.0, 6.0, 9.0, 7.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0],
+            "sizemode": "area",
+            "sizeref": 0.145
+        },
+        "mode": "markers",
+        "name": "Spree",
+        "showlegend": true,
+        "subplot": "mapbox",
+        "type": "scattermapbox"
+    }], {
+        "legend": {"itemsizing": "constant", "title": {"text": "Tipo"}, "tracegroupgap": 0},
+        "mapbox": {
+            "center": {"lat": 37.512884572000004, "lon": -96.35372880504},
+            "domain": {"x": [0.0, 1.0], "y": [0.0, 1.0]},
+            "style": "carto-positron",
+            "zoom": 3
+        },
+        "margin": {"t": 60},
+        "template": {
+            "data": {
+                "barpolar": [{
+                    "marker": {
+                        "line": {"color": "#E5ECF6", "width": 0.5},
+                        "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}
+                    }, "type": "barpolar"
+                }],
+                "bar": [{
+                    "error_x": {"color": "#2a3f5f"},
+                    "error_y": {"color": "#2a3f5f"},
+                    "marker": {
+                        "line": {"color": "#E5ECF6", "width": 0.5},
+                        "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}
+                    },
+                    "type": "bar"
+                }],
+                "carpet": [{
+                    "aaxis": {
+                        "endlinecolor": "#2a3f5f",
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "minorgridcolor": "white",
+                        "startlinecolor": "#2a3f5f"
+                    },
+                    "baxis": {
+                        "endlinecolor": "#2a3f5f",
+                        "gridcolor": "white",
+                        "linecolor": "white",
+                        "minorgridcolor": "white",
+                        "startlinecolor": "#2a3f5f"
+                    },
+                    "type": "carpet"
+                }],
+                "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}],
+                "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}],
+                "contour": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "contour"
+                }],
+                "heatmapgl": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "heatmapgl"
+                }],
+                "heatmap": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "heatmap"
+                }],
+                "histogram2dcontour": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "histogram2dcontour"
+                }],
+                "histogram2d": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "histogram2d"
+                }],
+                "histogram": [{
+                    "marker": {"pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}},
+                    "type": "histogram"
+                }],
+                "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}],
+                "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}],
+                "pie": [{"automargin": true, "type": "pie"}],
+                "scatter3d": [{
+                    "line": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scatter3d"
+                }],
+                "scattercarpet": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scattercarpet"
+                }],
+                "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}],
+                "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}],
+                "scattermapbox": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scattermapbox"
+                }],
+                "scatterpolargl": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scatterpolargl"
+                }],
+                "scatterpolar": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scatterpolar"
+                }],
+                "scatter": [{
+                    "fillpattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2},
+                    "type": "scatter"
+                }],
+                "scatterternary": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scatterternary"
+                }],
+                "surface": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "surface"
+                }],
+                "table": [{
+                    "cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}},
+                    "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}},
+                    "type": "table"
+                }]
+            }, "layout": {
+                "annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1},
+                "autotypenumbers": "strict",
+                "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                "colorscale": {
+                    "diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]],
+                    "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]
+                },
+                "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"],
+                "font": {"color": "#2a3f5f"},
+                "geo": {
+                    "bgcolor": "white",
+                    "lakecolor": "white",
+                    "landcolor": "#E5ECF6",
+                    "showlakes": true,
+                    "showland": true,
+                    "subunitcolor": "white"
+                },
+                "hoverlabel": {"align": "left"},
+                "hovermode": "closest",
+                "mapbox": {"style": "light"},
+                "paper_bgcolor": "white",
+                "plot_bgcolor": "#E5ECF6",
+                "polar": {
+                    "angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""},
+                    "bgcolor": "#E5ECF6",
+                    "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}
+                },
+                "scene": {
+                    "xaxis": {
+                        "backgroundcolor": "#E5ECF6",
+                        "gridcolor": "white",
+                        "gridwidth": 2,
+                        "linecolor": "white",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "white"
+                    },
+                    "yaxis": {
+                        "backgroundcolor": "#E5ECF6",
+                        "gridcolor": "white",
+                        "gridwidth": 2,
+                        "linecolor": "white",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "white"
+                    },
+                    "zaxis": {
+                        "backgroundcolor": "#E5ECF6",
+                        "gridcolor": "white",
+                        "gridwidth": 2,
+                        "linecolor": "white",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "white"
+                    }
+                },
+                "shapedefaults": {"line": {"color": "#2a3f5f"}},
+                "ternary": {
+                    "aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""},
+                    "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""},
+                    "bgcolor": "#E5ECF6",
+                    "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}
+                },
+                "title": {"x": 0.05},
+                "xaxis": {
+                    "automargin": true,
+                    "gridcolor": "white",
+                    "linecolor": "white",
+                    "ticks": "",
+                    "title": {"standoff": 15},
+                    "zerolinecolor": "white",
+                    "zerolinewidth": 2
+                },
+                "yaxis": {
+                    "automargin": true,
+                    "gridcolor": "white",
+                    "linecolor": "white",
+                    "ticks": "",
+                    "title": {"standoff": 15},
+                    "zerolinecolor": "white",
+                    "zerolinewidth": 2
+                }
+            }
+        }
+    }, {"responsive": true})
+}
+;
+</script>
+<script type="text/javascript">                                    window.PLOTLYENV = window.PLOTLYENV || {};
+if (document.getElementById("779ffa0a-82bf-4c84-986f-e43c121a696f")) {
+    Plotly.newPlot("779ffa0a-82bf-4c84-986f-e43c121a696f", [{
+        "hovertemplate": "year=%{x}<br>shootings=%{y}<extra></extra>",
+        "legendgroup": "",
+        "line": {"color": "#636efa", "dash": "solid"},
+        "marker": {"symbol": "circle"},
+        "mode": "lines+markers",
+        "name": "",
+        "orientation": "v",
+        "showlegend": false,
+        "x": [1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+        "xaxis": "x",
+        "y": [1.0, 0.0, 2.0, 0.0, 1.0, 1.0, 1.0, 2.0, 1.0, 3.0, 2.0, 4.0, 1.0, 1.0, 1.0, 2.0, 3.0, 4.0, 1.0, 1.0, 0.0, 1.0, 1.0, 2.0, 3.0, 4.0, 3.0, 4.0, 1.0, 3.0, 7.0, 5.0, 4.0, 7.0, 6.0, 11.0, 12.0, 10.0, 2.0, 6.0, 12.0, 4.0],
+        "yaxis": "y",
+        "type": "scatter"
+    }, {
+        "hovertemplate": "x=%{x}<br>y=%{y}<extra></extra>",
+        "legendgroup": "",
+        "line": {"color": "red", "dash": "solid"},
+        "marker": {"symbol": "circle"},
+        "mode": "lines",
+        "name": "",
+        "orientation": "v",
+        "showlegend": false,
+        "x": [1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+        "xaxis": "x",
+        "y": [1.3281485955994867, 1.260193295085628, 1.2046706838300452, 1.161580761843652, 1.1309235291155346, 1.112698985645693, 1.1069071314414032, 1.113547966502665, 1.1326214908222028, 1.1641277044036542, 1.2080666072470194, 1.2644381993522984, 1.3332424807194911, 1.4144794513485976, 1.508149111243256, 1.61425146039619, 1.7327864988110377, 1.8637542264877993, 2.0071546434301126, 2.1629877496307017, 2.3312535450932046, 2.5119520298176212, 2.7050832038075896, 2.9106470670558338, 3.1286436195659917, 3.3590728613417014, 3.601934792379325, 3.857229412675224, 4.124956722233037, 4.405116721052764, 4.69770940914168, 5.0027347864852345, 5.320192853090703, 5.650083608961722, 5.992407054094656, 6.347163188485865, 6.714352012142626, 7.093973525057663, 7.48602772724189, 7.890514618680754, 8.30743419938517, 8.7367864693515],
+        "yaxis": "y",
+        "type": "scatter"
+    }], {
+        "legend": {"tracegroupgap": 0},
+        "margin": {"t": 60},
+        "template": {
+            "data": {
+                "barpolar": [{
+                    "marker": {
+                        "line": {"color": "white", "width": 0.5},
+                        "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}
+                    }, "type": "barpolar"
+                }],
+                "bar": [{
+                    "error_x": {"color": "#2a3f5f"},
+                    "error_y": {"color": "#2a3f5f"},
+                    "marker": {
+                        "line": {"color": "white", "width": 0.5},
+                        "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}
+                    },
+                    "type": "bar"
+                }],
+                "carpet": [{
+                    "aaxis": {
+                        "endlinecolor": "#2a3f5f",
+                        "gridcolor": "#C8D4E3",
+                        "linecolor": "#C8D4E3",
+                        "minorgridcolor": "#C8D4E3",
+                        "startlinecolor": "#2a3f5f"
+                    },
+                    "baxis": {
+                        "endlinecolor": "#2a3f5f",
+                        "gridcolor": "#C8D4E3",
+                        "linecolor": "#C8D4E3",
+                        "minorgridcolor": "#C8D4E3",
+                        "startlinecolor": "#2a3f5f"
+                    },
+                    "type": "carpet"
+                }],
+                "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}],
+                "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}],
+                "contour": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "contour"
+                }],
+                "heatmapgl": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "heatmapgl"
+                }],
+                "heatmap": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "heatmap"
+                }],
+                "histogram2dcontour": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "histogram2dcontour"
+                }],
+                "histogram2d": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "histogram2d"
+                }],
+                "histogram": [{
+                    "marker": {"pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}},
+                    "type": "histogram"
+                }],
+                "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}],
+                "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}],
+                "pie": [{"automargin": true, "type": "pie"}],
+                "scatter3d": [{
+                    "line": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scatter3d"
+                }],
+                "scattercarpet": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scattercarpet"
+                }],
+                "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}],
+                "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}],
+                "scattermapbox": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scattermapbox"
+                }],
+                "scatterpolargl": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scatterpolargl"
+                }],
+                "scatterpolar": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scatterpolar"
+                }],
+                "scatter": [{
+                    "fillpattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2},
+                    "type": "scatter"
+                }],
+                "scatterternary": [{
+                    "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                    "type": "scatterternary"
+                }],
+                "surface": [{
+                    "colorbar": {"outlinewidth": 0, "ticks": ""},
+                    "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "type": "surface"
+                }],
+                "table": [{
+                    "cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}},
+                    "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}},
+                    "type": "table"
+                }]
+            }, "layout": {
+                "annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1},
+                "autotypenumbers": "strict",
+                "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                "colorscale": {
+                    "diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]],
+                    "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                    "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]
+                },
+                "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"],
+                "font": {"color": "#2a3f5f"},
+                "geo": {
+                    "bgcolor": "white",
+                    "lakecolor": "white",
+                    "landcolor": "white",
+                    "showlakes": true,
+                    "showland": true,
+                    "subunitcolor": "#C8D4E3"
+                },
+                "hoverlabel": {"align": "left"},
+                "hovermode": "closest",
+                "mapbox": {"style": "light"},
+                "paper_bgcolor": "white",
+                "plot_bgcolor": "white",
+                "polar": {
+                    "angularaxis": {"gridcolor": "#EBF0F8", "linecolor": "#EBF0F8", "ticks": ""},
+                    "bgcolor": "white",
+                    "radialaxis": {"gridcolor": "#EBF0F8", "linecolor": "#EBF0F8", "ticks": ""}
+                },
+                "scene": {
+                    "xaxis": {
+                        "backgroundcolor": "white",
+                        "gridcolor": "#DFE8F3",
+                        "gridwidth": 2,
+                        "linecolor": "#EBF0F8",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "#EBF0F8"
+                    },
+                    "yaxis": {
+                        "backgroundcolor": "white",
+                        "gridcolor": "#DFE8F3",
+                        "gridwidth": 2,
+                        "linecolor": "#EBF0F8",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "#EBF0F8"
+                    },
+                    "zaxis": {
+                        "backgroundcolor": "white",
+                        "gridcolor": "#DFE8F3",
+                        "gridwidth": 2,
+                        "linecolor": "#EBF0F8",
+                        "showbackground": true,
+                        "ticks": "",
+                        "zerolinecolor": "#EBF0F8"
+                    }
+                },
+                "shapedefaults": {"line": {"color": "#2a3f5f"}},
+                "ternary": {
+                    "aaxis": {"gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": ""},
+                    "baxis": {"gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": ""},
+                    "bgcolor": "white",
+                    "caxis": {"gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": ""}
+                },
+                "title": {"x": 0.05},
+                "xaxis": {
+                    "automargin": true,
+                    "gridcolor": "#EBF0F8",
+                    "linecolor": "#EBF0F8",
+                    "ticks": "",
+                    "title": {"standoff": 15},
+                    "zerolinecolor": "#EBF0F8",
+                    "zerolinewidth": 2
+                },
+                "yaxis": {
+                    "automargin": true,
+                    "gridcolor": "#EBF0F8",
+                    "linecolor": "#EBF0F8",
+                    "ticks": "",
+                    "title": {"standoff": 15},
+                    "zerolinecolor": "#EBF0F8",
+                    "zerolinewidth": 2
+                }
+            }
+        },
+        "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "year"}},
+        "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "shootings"}}
+    }, {"responsive": true})
+}
+;
+</script>
+<script type="text/javascript">                                    window.PLOTLYENV = window.PLOTLYENV || {};
+  if (document.getElementById("f83626a0-54be-49b4-b2c6-2669d37603b7")) {
+      Plotly.newPlot("f83626a0-54be-49b4-b2c6-2669d37603b7", [{
+          "cells": {
+              "align": "left",
+              "values": [["Nashville religious school shooting", "Michigan State University shooting", "Half Moon Bay spree shooting", "LA dance studio mass shooting", "Virginia Walmart shooting", "LGBTQ club shooting", "University of Virginia shooting", "Raleigh spree shooting", "Greenwood Park Mall shooting", "Highland Park July 4 parade shooting", "Church potluck dinner shooting", "Concrete company shooting", "Tulsa medical center shooting", "Robb Elementary School massacre", "Buffalo supermarket massacre", "Sacramento County church shooting", "Oxford High School shooting", "San Jose VTA shooting", "FedEx warehouse shooting", "Orange office complex shooting", "Boulder supermarket shooting", "Atlanta massage parlor shootings", "Springfield convenience store shooting", "Molson Coors shooting", "Jersey City kosher market shooting", "Pensacola Naval base shooting", "Odessa-Midland shooting spree", "Dayton entertainment district shooting", "El Paso Walmart mass shooting", "Gilroy garlic festival shooting", "Virginia Beach municipal building shooting", "Harry Pratt Co. warehouse shooting", "Pennsylvania hotel bar shooting", "SunTrust bank shooting", "Mercy Hospital shooting", "Thousand Oaks nightclub shooting", "Tree of Life synagogue shooting", "Rite Aid warehouse shooting", "T&T Trucking shooting", "Fifth Third Center shooting", "Capital Gazette shooting", "Santa Fe High School shooting", "Waffle House shooting", "Yountville veterans home shooting", "Marjory Stoneman Douglas High School shooting", "Pennsylvania carwash shooting", "Rancho Tehama shooting spree", "Texas First Baptist Church massacre", "Walmart shooting in suburban Denver", "Edgewood businees park shooting", "Las Vegas Strip massacre", "San Francisco UPS shooting", "Pennsylvania supermarket shooting", "Florida awning manufacturer shooting", "Rural Ohio nursing home shooting", "Fresno downtown shooting", "Fort Lauderdale airport shooting", "Cascade Mall shooting", "Baton Rouge police shooting", "Dallas police shooting", "Orlando nightclub massacre", "Excel Industries mass shooting", "Kalamazoo shooting spree", "San Bernardino mass shooting", "Planned Parenthood clinic", "Colorado Springs shooting rampage", "Umpqua Community College shooting", "Chattanooga military recruitment center", "Charleston Church Shooting", "Trestle Trail bridge shooting", "Marysville-Pilchuck High School shooting", "Isla Vista mass murder", "Fort Hood shooting 2", "Alturas tribal shooting", "Washington Navy Yard shooting", "Hialeah apartment shooting", "Santa Monica rampage", "Pinewood Village Apartment shooting", "Mohawk Valley shootings", "Sandy Hook Elementary massacre", "Accent Signage Systems shooting", "Sikh temple shooting", "Aurora theater shooting", "Seattle cafe shooting", "Oikos University killings", "Su Jung Health Sauna shooting", "Seal Beach shooting", "IHOP shooting", "Tucson shooting", "Hartford Beer Distributor shooting", "Coffee shop police killings", "Fort Hood massacre", "Binghamton shootings", "Carthage nursing home shooting", "Atlantis Plastics shooting", "Northern Illinois University shooting", "Kirkwood City Council shooting", "Westroads Mall shooting", "Crandon shooting", "Virginia Tech massacre", "Trolley Square shooting", "Amish school shooting", "Capitol Hill massacre", "Goleta postal shootings", "Red Lake massacre", "Living Church of God shooting", "Damageplan show shooting", "Lockheed Martin shooting", "Navistar shooting", "Wakefield massacre", "Hotel shooting", "Wedgwood Baptist Church shooting", "Atlanta day trading spree killings", "Columbine High School massacre", "Thurston High School shooting", "Westside Middle School killings", "Connecticut Lottery shooting", "Caltrans maintenance yard shooting", "R.E. Phelon Company shooting", "Fort Lauderdale revenge shooting", "Walter Rossler Company massacre", "Air Force base shooting", "Chuck E. Cheese's killings", "Long Island Rail Road massacre", "Luigi's shooting", "101 California Street shootings", "Watkins Glen killings", "Lindhurst High School shooting", "Royal Oak postal shootings", "University of Iowa shooting", "Luby's massacre", "GMAC massacre", "Standard Gravure shooting", "Stockton schoolyard shooting", "ESL shooting", "Shopping centers spree killings", "United States Postal Service shooting", "San Ysidro McDonald's massacre", "Dallas nightclub shooting", "Welding shop shooting"], [2023, 2023, 2023, 2023, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2022, 2021, 2021, 2021, 2021, 2021, 2021, 2020, 2020, 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2017, 2017, 2017, 2017, 2017, 2017, 2017, 2017, 2017, 2017, 2017, 2016, 2016, 2016, 2016, 2016, 2016, 2015, 2015, 2015, 2015, 2015, 2015, 2015, 2014, 2014, 2014, 2014, 2013, 2013, 2013, 2013, 2013, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2011, 2011, 2011, 2010, 2009, 2009, 2009, 2009, 2008, 2008, 2008, 2007, 2007, 2007, 2007, 2006, 2006, 2006, 2005, 2005, 2004, 2003, 2001, 2000, 1999, 1999, 1999, 1999, 1998, 1998, 1998, 1997, 1997, 1996, 1995, 1994, 1993, 1993, 1993, 1993, 1992, 1992, 1991, 1991, 1991, 1990, 1989, 1989, 1988, 1987, 1986, 1984, 1984, 1982], ["Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Spree", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Spree", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass", "Mass", "Spree", "Mass", "Mass", "Mass", "Mass"], [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 38.60111019, 42.84410784, 37.316097, 39.68663, 33.83542, 39.986961, 34.111653, 37.210432, 43.044511, 40.707363, 30.364707, 31.925974, 39.757312, 31.771068, 36.997191, 36.75442, 41.753725, 40.785142, 27.471043, 41.847667, 34.176946, 40.443898, 39.455658, 35.349388, 39.101981, 38.994548, 29.392825, 36.052521, 38.392496, 26.30483, 40.052151, 40.018759, 29.273282, 39.876374, 39.452189, 36.095739, 37.765947, 41.529546, 28.580295, 39.959034, 36.746378, 26.072751, 48.461367, 30.433601, 32.7801052, 28.519718, 38.135992, 42.236689, 34.075961, 38.881031, 38.83755, 43.289538, 35.047157, 32.788387, 44.204124, 48.050824, 34.436283, 31.141716, 41.487104, 38.874981, 25.864338, 34.008617, 47.3129607, 43.045601, 41.4123225, 44.977425, 42.8858503, 39.706038, 47.6038321, 37.8043808, 33.9412127, 33.741176, 39.1637984, 32.335941, 41.798764, 47.15277, 31.135557, 42.099802, 35.333434, 37.76721, 41.9294736, 38.580093, 41.265719, 45.5719072, 37.2295733, 40.7606467, 39.9589, 47.6229, 34.425571, 47.876346, 43.0605671, 39.9622601, 32.410842, 41.908163, 42.500429, 27.966479, 32.664511, 33.850116, 39.604034, 44.0462362, 35.8209895, 41.6856325, 33.7877944, 33.5598586, 26.119269, 27.828025, 47.61864486, 39.675599, 40.7267682, 35.0529931, 37.792968, 42.3810555, 39.07868761, 42.4894801, 41.6606893, 31.1171194, 30.3321838, 38.2542376, 37.9577016, 37.3688301, 28.0331886, 35.6672015, 32.5520013, 32.925166, 25.796491], [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -121.4189659, -83.25992831, -121.888533, -86.32313, -117.85379, -105.251168, -84.580376, -93.23686, -87.962537, -74.083609, -87.288567, -102.2796, -84.184947, -106.375655, -121.584819, -76.060378, -88.331057, -77.839411, -81.45847, -87.622009, -118.874793, -79.921398, -76.208485, -118.916335, -84.511782, -76.543657, -95.141972, -86.616944, -122.366528, -80.269511, -79.389166, -122.393089, -98.056488, -104.986132, -76.309988, -115.171544, -122.406087, -75.94722, -81.294086, -82.596508, -119.800319, -80.143382, -122.337918, -91.081403, -96.8000082, -81.376777, -97.425145, -85.674795, -117.27789, -104.849057, -104.814251, -123.333193, -85.311819, -79.933143, -88.467541, -122.176918, -119.8714406, -97.777559, -120.542237, -76.99453, -80.311775, -118.494754, -122.3393665, -74.984891, -73.31142358, -93.310408, -87.8631362, -104.820594, -122.3300624, -122.2708166, -84.2135309, -118.1046356, -119.7674034, -110.975132, -72.570068, -122.467308, -97.783664, -75.917723, -79.414592, -87.5573742, -88.7503647, -90.40691, -96.067495, -88.9028922, -80.4139393, -111.89109, -76.0806, -122.3165, -119.866069, -95.0169401, -88.1064787, -83.0007065, -88.634539, -87.879908, -71.075913, -82.570586, -97.384246, -84.377839, -105.074103, -123.0220289, -90.6682606, -72.72983827, -117.8531119, -81.721952, -80.104119, -97.548198, -117.6483587, -104.844845, -73.6342955, -78.8787058, -122.397973, -76.8705777, -121.5475762, -83.1446485, -91.5302214, -97.7277959, -81.655651, -85.759407, -121.2907796, -122.0363496, -80.6429695, -97.42937037, -117.0430813, -96.838676, -80.226683], ["F (identified as transgender, per police)", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "Male & Female", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "F", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "Male & Female", "M", "M", "Male", "Male", "Male", "M", "Male", "M", "M", "Female", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Female", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male", "Male"], [null, "Black", "Asian", "Asian", "Black", "White", "Black", "White", "White", "White", "White", null, "Black", "Latino", "White", null, null, null, "White", null, null, "White", null, "Black", "Black", null, "White", "White", "White", null, "Black", "Black", "White", "White", "Latino", null, "White", "Black", "Latino", "Latino", "White", "White", "White", "Asian", "White", "White", "White", "White", "White", "Black", "White", "Asian", "White", null, "White", "Black", "Latino", null, "Black", "Black", "Other", "Black", "White", "Other", "White", "White ", "Other", "Other", "White", "Latino", "Native American", "White", "Latino", "Native American", "Black", "Latino", "White", "Black", "White", "white", "white", "white", "white", "white", "Asian", "Asian", "white", "Latino", "white", "black", "black", "Other", "Asian", "white", "white", "white", "black", "white", "white", "Asian", "white", "white", "white", "white", "Native American", "white", "white", "white", "black", "white", "Latino", "white", "white", "white", "white", "white", "white", "Latino", "black", "black", "unclear", "white", "black", "black", "white", "white", "white", "white", "white", "Asian", "white", "black", "white", "white", "white", "white", "white", "white", "white", "white"], ["semiautomatic rifle, semiautomatic handgun", "semiautomatic handguns", "semiautomatic handgun", "semiautomatic assault weapon (Details pending)", "semiautomatic handgun", "semiautomatic rifle; semiautomatic handgun", "semiautomatic pistol", "shotgun, semiautomatic handgun", "semiautomatic rifles; semiautomatic handgun", "semiautomatic rifle", "semiautomatic handgun", "semiautomatic handgun", "semiautomatic rifle; semiautomatic handgun", "semiautomatic rifles", "semiautomatic rifle", "semiautomatic rifle", "semiautomatic handgun", "semiautomatic handguns", "semiautomatic rifle", "semiautomatic handgun", "semiautomatic rifle, semiautomatic handgun; tactical vest", "semiautomatic handgun", "semiautomatic rifle; semiautomatic handgun", "semiautomatic handgun", "semiautomatic rifle; shotgun; semiautomatic handguns", "semiautomatic handgun", "semiautomatic rifle", "semiautomatic rifle", "semiautomatic rifle", "semiautomatic rifle", "2 handguns", "handgun", "handgun", "handgun", "semiautomatic handgun", "semiautomatic handgun", "semiautomatic rifle; semiautomatic handguns", "semiautomatic handgun", "handgun", "semiautomatic handgun", "shotgun", "shotgun; .38 revolver", "semiautomatic rifle", "semiautomatic rifle; shotgun", "semiautomatic rifle", "semiautomatic rifle and semiautomatic handgun", "semiautomatic rifles", "semiautomatic rifle", "semiautomatic handgun", "handgun", "23 firearms, mostly rifles; including scopes, and two modified for \"fully automatic\" firing; two were mounted on tripods", "two handguns", "shotguns", "semiautomatic handgun", "handgun, shotgun", "handgun", "semiautomatic handgun\n", "Rifle", "Two semiautomatic rifles; one semiautomatic handgun", "Semiautomatic rifle, semiautomatic handguns", "Semiautomatic rifle, semiautomatic handgun", "Semiautomatic rifle, semiautomatic handgun", "Semiautomatic handgun", "Two assault rifles and two semi-automatic pistols were used in the attack. Police found a remote controlled explosive device at the scene of the crime. At the home were 12 pipe bombs, 2,500 rounds for the AR-15 variants, 2,000 rounds for the pistols, and several hundred for a .22 calibre rifle. In the suspects' car were an additional 1,400 rounds for the rifles and 200 for the handguns.", "semiautomatic rifle", "Two handguns and a rifle", "Five pistols, one rifle, five magazines of ammunition", "2 assault rifles; semiautomatic handgun\n", "Handgun", "Two handguns\n", "Handgun", "Three semi-automatic handguns and two hunting knives", "handgun\n", "Two handguns and a butcher knife", "Sawed-off shotgun, 2 boxes of shells; also a .45-caliber handgun taken from a security guard he shot at the scene.", "9mm semi-automatic handgun", "Assault rifle, high capacity magazines, antique handgun\n", "Semiautomatic handgun, shotgun", "Shotgun", "Two semiautomatic handguns, one rifle (assault), one shotgun (assault)", "One semiautomatic handgun", "One semiautomatic handgun", "Two semiautomatic handguns, one rifle (assault), one shotgun", "Two semiautomatic handguns", "One semiautomatic handgun", "One semiautomatic handgun", "Two semiautomatic handguns, one revolver", "Two rifles (both assault), one revolver", "One semiautomatic handgun", "Two semiautomatic handguns", "One semiautomatic handgun", "One semiautomatic handgun", "Two semiautomatic handguns", "One revolver, one shotgun", "One semiautomatic handgun", "Three semiautomatic handguns, one shotgun", "One semiautomatic handgun, one revolver", "One rifle (assault)", "One rifle (assault)", "Two semiautomatic handguns", "One revolver, one shotgun", "One semiautomatic handgun, one rifle, one shotgun", "Two semiautomatic handguns, one rifle (assault), one shotgun", "One semiautomatic handgun", "Two semiautomatic handguns, one shotgun", "One semiautomatic handgun", "One semiautomatic handgun", "One semiautomatic handgun, two rifles, one derringer, one shotgun", "Two rifles, one revolver, one shotgun", "One semiautomatic handgun, one rifle (assault), one shotgun", "One semiautomatic handgun, one revolver", "Two semiautomatic handguns", "Three semiautomatic handguns, one revolver", "One semiautomatic handgun (assault), one rifle (assault), two shotguns", "Two semiautomatic handguns, one rifle", "Two semiautomatic handguns, two rifles, three revolvers, two derringers", "One semiautomatic handgun", "One rifle (assault)", "One semiautomatic handgun", "One semiautomatic handgun, one revolver", "One semiautomatic handgun, one revolver", "One rifle (assault)", "One semiautomatic handgun", "One semiautomatic handgun", "One rifle, two shotguns", "Three semiautomatic handguns (two assault)", "One semiautomatic handgun", "One rifle, one shotgun", "One rifle", "One revolver", "Two semiautomatic handguns", "One rifle, one revolver", "Three semiautomatic handguns (two assault), one rifle (assault), one revolver", "One semiautomatic handgun, one rifle (assault)", "Two semiautomatic handguns, one rifle, two revolvers, two shotguns", "One rifle, one revolver, one shotgun", "Three semiautomatic handguns", "One semiautomatic handgun, one rifle (assault), one shotgun", "One semiautomatic handgun", "One shotgun"], [null, "yes", null, null, null, null, "yes", null, "yes", "yes", "yes", null, "yes", "yes", "yes", null, null, null, "yes", null, "Yes", null, "Yes", null, null, null, null, "Yes", "Yes", "Yes", "Yes", "No", "Yes", "Yes", null, "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "TBD", "Yes", "Yes", "Yes", "TBD", "No", "Kelley passed federal criminal background checks; the US Air Force failed to provide information on his criminal history to the FBI", "TBD", "No", "Yes", "No", "TBD", "TBD", "TBD", "Unknown", "Yes", "TBD", "Unknown", "Yes", "Yes", "Yes", "Yes", "\nYes", "Unknown", "Yes", "Yes", "Yes (\"some of the weapons were purchased legally and some of them may not have been\")", "Yes", "Yes", "No", "Yes", "\nYes", "Unknown", "Yes", "Yes", "Yes ", "Yes", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "No", "Yes", "Yes", "Unknown", "Yes", "Yes", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "No", "No", "Yes", "Yes", "No", "Yes", "Yes", "Yes", "Unknown", "Yes", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "Yes"], [null, null, null, "yes", null, "yes", null, null, null, null, null, null, null, "yes", "yes", null, null, "yes", "yes", null, "yes", null, null, null, null, null, "yes", null, null, "TBD", "TBD", "Yes", null, "Yes", null, "Yes", null, null, null, "Yes", null, null, "Yes", "Yes", "Yes", "TBD", "TBD", "Yes", "Unclear", "Unclear", "TBD", "Yes", "Unclear", "Unclear", "Yes", "Unclear", "Yes", "Yes", "Yes", "Unclear", "Unclear", "Unclear", "Unclear", "Unclear", "Unclear", "Unclear", "Unclear", "Unclear", "Unclear", "Yes", "Unclear", "Yes", "Unclear", "Unknown", "Yes", "Unclear", "Yes", "No", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "Unclear", "Yes", "Yes", "No", "Yes", "No", "Yes", "Unclear", "Yes", "Unclear", "No", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "No", "No", "Yes", "No", "Yes", "Unclear", "Yes", "No", "No", "Yes", "No", "Yes", "Unclear", "No", "No", "Yes", "Yes", "Yes", "Yes", "Unclear ", "Yes", "Yes", "Yes"], [28.0, 43.0, 67.0, 72.0, 31.0, 22.0, 22.0, 15.0, 20.0, 21.0, 70.0, 23.0, 45.0, 18.0, 18.0, null, 15.0, 57.0, 19.0, 44.0, 21.0, 21.0, 31.0, 51.0, null, 21.0, 36.0, 24.0, 21.0, 19.0, 40.0, 45.0, 21.0, 21.0, 32.0, 28.0, 46.0, 26.0, 54.0, 29.0, 38.0, 17.0, 29.0, 36.0, 19.0, 28.0, 44.0, 26.0, 47.0, 37.0, 64.0, 38.0, 24.0, 45.0, 43.0, 39.0, 26.0, 20.0, 29.0, 25.0, 29.0, 38.0, 45.0, 28.0, 57.0, 33.0, 26.0, 24.0, 21.0, 27.0, 15.0, 22.0, 34.0, 44.0, 34.0, 42.0, 23.0, 27.0, 64.0, 20.0, 36.0, 40.0, 24.0, 40.0, 43.0, 59.0, 42.0, 32.0, 22.0, 34.0, 37.0, 39.0, 41.0, 45.0, 25.0, 27.0, 52.0, 19.0, 20.0, 23.0, 18.0, 32.0, 28.0, 44.0, 16.0, 44.0, 25.0, 48.0, 66.0, 42.0, 36.0, 47.0, 44.0, 17.0, 15.0, 11.0, 35.0, 41.0, 43.0, 41.0, 28.0, 20.0, 19.0, 35.0, 22.0, 55.0, 50.0, 20.0, 31.0, 28.0, 35.0, 42.0, 47.0, 26.0, 39.0, 59.0, 44.0, 41.0, 39.0, 51.0], ["Nashville, TN", "East Lansing, Michigan", "Half Moon Bay, California", "Monterey Park, California", "Chesapeake, Virginia", "Colorado Springs, Colorado", "Charlottesville, Virginia", "Hedingham, North Carolina", "Greenwood, Indiana", "Highland Park, Illinois", "Birmingham, Alabama", "Smithsburg, Maryland", "Tulsa, Oklahoma", "Uvalde, Texas", "Buffalo, New York", "Sacramento, California", "Oxford, Michigan", "San Jose, California", "Indianapolis, Indiana", "Orange, California", "Boulder, Colorado", "Atlanta, Georgia", "Springfield, Missouri", "Milwaukee, Wisconsin", "Jersey City, New Jersey", "Pensacola, Florida", "Odessa, Texas", "Dayton, Ohio", "El Paso, Texas", "Gilroy, California", "Virginia Beach, Virginia", "Aurora, Illinois", "State College, Pennsylvania", "Sebring, Florida", "Chicago, Illinois", "Thousand Oaks, California", "Pittsburgh, Pennsylvania", "Perryman, Maryland", "Bakersfield, California", "Cincinnati, Ohio", "Annapolis, Maryland", "Santa Fe, Texas", "Nashville, Tennessee", "Yountville, California", "Parkland, Florida", "Melcroft, Pennsylvania", "Rancho Tehama, California", "Sutherland Springs, Texas", "Thornton, Colorado", "Edgewood, Maryland", "Las Vegas, Nevada", "San Francisco, California", "Tunkhannock, Pennsylvania", "Orlando, Florida", "Kirkersville, Ohio", "Fresno, California", "Fort Lauderdale, Florida", "Burlington, Washington", "Baton Rouge, Lousiana", "Dallas, Texas", "Orlando, Florida", "Hesston, Kansas", "Kalamazoo County, Michigan", "San Bernardino, California", "Colorado Springs, Colorado", "Colorado Springs, Colorado", "Roseburg, Oregon", "Chattanooga, Tennessee", "Charleston, South Carolina", "Menasha, Wisconsin", "Marysville, Washington", "Santa Barbara, California", "Fort Hood, Texas", "Alturas, California", "Washington, D.C.", "Hialeah, Florida", "Santa Monica, California", "Federal Way, Washington", "Herkimer County, New York", "Newtown, Connecticut", "Minneapolis, Minnesota", "Oak Creek, Wisconsin", "Aurora, Colorado", "Seattle, Washington", "Oakland, California", "Norcross, Georgia", "Seal Beach, California", "Carson City, Nevada", "Tucson, Arizona", "Manchester, Connecticut", "Parkland, Washington", "Fort Hood, Texas", "Binghamton, New York", "Carthage, North Carolina", "Henderson, Kentucky", "DeKalb, Illinois", "Kirkwood, Missouri", "Omaha, Nebraska", "Crandon, Wisconsin", "Blacksburg, Virginia", "Salt Lake City, Utah", "Lancaster County, Pennsylvania", "Seattle, Washington", "Goleta, California", "Red Lake, Minnesota", "Brookfield, Wisconsin", "Columbus, Ohio", "Meridian, Mississippi", "Melrose Park, Illinois", "Wakefield, Massachusetts", "Tampa, Florida", "Fort Worth, Texas", "Atlanta, Georgia", "Littleton, Colorado", "Springfield, Oregon", "Jonesboro, Arkansas", "Newington, Connecticut", "Orange, California", "Aiken, South Carolina", "Fort Lauderdale, Florida", "Corpus Christi, Texas", "Fairchild Air Force Base, Washington", "Aurora, Colorado", "Garden City, New York", "Fayetteville, North Carolina", "San Francisco, California", "Watkins Glen, New York", "Olivehurst, California", "Royal Oak, Michigan", "Iowa City, Iowa", "Killeen, Texas", "Jacksonville, Florida", "Louisville, Kentucky", "Stockton, California", "Sunnyvale, California", "Palm Bay, Florida", "Edmond, Oklahoma", "San Ysidro, California", "Dallas, Texas", "Miami, Florida"], ["School", "School", "workplace", "Other", "Workplace", "Other", "School", "Other", "workplace", "Other", "religious", "workplace", "workplace", "School", "workplace", "Religious", "School", "Workplace", "Workplace", "Workplace", "Workplace", "Workplace", "Workplace", "Workplace", "Other", "Military", "Other", "Other", "Workplace", "Other", "Workplace", "Workplace", "Other", "Workplace", "Workplace", "Other", "Religious", "Workplace", "Workplace", "Workplace", "Workplace", "School", "Other", "Workplace", "School", "Other", "Other", "Religious", "Other", "Workplace", "Other", "Workplace", "Workplace", "Workplace", "Workplace", "Other", "Airport", "Other", "Other", "Other", "Other", "Workplace", "Other", "\nWorkplace", "Workplace", "Other", "School", "Military", "Religious", "Other", "School", "School", "Military", "Other", "Military", "Other\n", "Other\n", "Other\n", "Other", "School", "Workplace", "Religious", "Other", "Other", "School", "Other", "Other", "Other", "Other", "Workplace", "Other", "Military", "Other", "Other", "Workplace", "School", "Other", "Other", "Other", "School", "Other", "School", "Other", "Workplace", "School", "Religious", "Other", "Workplace", "Workplace", "Workplace", "Workplace", "Religious", "Workplace", "School", "School", "School", "Workplace", "Workplace", "Workplace", "Workplace", "Workplace", "Military", "Workplace", "Other", "Other", "Other", "Other", "School", "Workplace", "School", "Other", "Other", "Workplace", "School", "Workplace", "Other", "Workplace", "Other", "Other", "Other"], [6.0, 8.0, 8.0, 21.0, 12.0, 30.0, 5.0, 7.0, 5.0, 53.0, 3.0, 4.0, 4.0, 38.0, 13.0, 4.0, 11.0, 9.0, 15.0, 5.0, 10.0, 9.0, 4.0, 5.0, 7.0, 11.0, 32.0, 36.0, 48.0, 15.0, 16.0, 11.0, 4.0, 5.0, 3.0, 34.0, 17.0, 6.0, 5.0, 5.0, 7.0, 23.0, 8.0, 3.0, 34.0, 5.0, 15.0, 46.0, 3.0, 6.0, 604.0, 5.0, 3.0, 5.0, 3.0, 3.0, 11.0, 5.0, 6.0, 16.0, 102.0, 17.0, 8.0, 35.0, 12.0, 3.0, 18.0, 7.0, 10.0, 4.0, 6.0, 19.0, 15.0, 6.0, 20.0, 7.0, 9.0, 5.0, 7.0, 29.0, 8.0, 10.0, 82.0, 7.0, 10.0, 5.0, 9.0, 12.0, 19.0, 11.0, 5.0, 44.0, 18.0, 11.0, 7.0, 26.0, 8.0, 13.0, 7.0, 55.0, 10.0, 11.0, 9.0, 8.0, 15.0, 11.0, 12.0, 15.0, 9.0, 7.0, 8.0, 15.0, 22.0, 37.0, 29.0, 15.0, 6.0, 7.0, 7.0, 7.0, 6.0, 28.0, 5.0, 25.0, 12.0, 15.0, 5.0, 14.0, 10.0, 7.0, 44.0, 14.0, 21.0, 35.0, 11.0, 20.0, 21.0, 41.0, 7.0, 11.0], [1.0, 5.0, 1.0, 10.0, 6.0, 25.0, 2.0, 2.0, 2.0, 46.0, 0.0, 1.0, 0.0, 17.0, 3.0, 0.0, 7.0, 0.0, 7.0, 1.0, 0.0, 1.0, 0.0, 0.0, 3.0, 8.0, 25.0, 27.0, 26.0, 12.0, 4.0, 6.0, 1.0, 0.0, 0.0, 22.0, 6.0, 3.0, 0.0, 2.0, 2.0, 13.0, 4.0, 0.0, 17.0, 1.0, 10.0, 20.0, 0.0, 3.0, 546.0, 2.0, 0.0, 0.0, 0.0, 0.0, 6.0, 0.0, 3.0, 11.0, 53.0, 14.0, 2.0, 21.0, 9.0, 0.0, 9.0, 2.0, 1.0, 1.0, 1.0, 13.0, 12.0, 2.0, 8.0, 0.0, 3.0, 0.0, 2.0, 2.0, 1.0, 3.0, 70.0, 1.0, 3.0, 0.0, 1.0, 7.0, 13.0, 2.0, 1.0, 31.0, 4.0, 3.0, 1.0, 21.0, 2.0, 4.0, 1.0, 23.0, 4.0, 5.0, 2.0, 0.0, 5.0, 4.0, 7.0, 8.0, 4.0, 0.0, 3.0, 7.0, 13.0, 24.0, 25.0, 10.0, 1.0, 2.0, 3.0, 1.0, 0.0, 23.0, 1.0, 19.0, 8.0, 6.0, 0.0, 10.0, 5.0, 1.0, 20.0, 4.0, 12.0, 29.0, 4.0, 14.0, 6.0, 19.0, 1.0, 3.0], [6.0, 3.0, 7.0, 11.0, 6.0, 5.0, 3.0, 5.0, 3.0, 7.0, 3.0, 3.0, 4.0, 21.0, 10.0, 4.0, 4.0, 9.0, 8.0, 4.0, 10.0, 8.0, 4.0, 5.0, 4.0, 3.0, 7.0, 9.0, 22.0, 3.0, 12.0, 5.0, 3.0, 5.0, 3.0, 12.0, 11.0, 3.0, 5.0, 3.0, 5.0, 10.0, 4.0, 3.0, 17.0, 4.0, 5.0, 26.0, 3.0, 3.0, 58.0, 3.0, 3.0, 5.0, 3.0, 3.0, 5.0, 5.0, 3.0, 5.0, 49.0, 3.0, 6.0, 14.0, 3.0, 3.0, 9.0, 5.0, 9.0, 3.0, 5.0, 6.0, 3.0, 4.0, 12.0, 7.0, 6.0, 5.0, 5.0, 27.0, 7.0, 7.0, 12.0, 6.0, 7.0, 5.0, 8.0, 5.0, 6.0, 9.0, 4.0, 13.0, 14.0, 8.0, 6.0, 5.0, 6.0, 9.0, 6.0, 32.0, 6.0, 6.0, 7.0, 8.0, 10.0, 7.0, 5.0, 7.0, 5.0, 7.0, 5.0, 8.0, 9.0, 13.0, 4.0, 5.0, 5.0, 5.0, 4.0, 6.0, 6.0, 5.0, 4.0, 6.0, 4.0, 9.0, 5.0, 4.0, 5.0, 6.0, 24.0, 10.0, 9.0, 6.0, 7.0, 6.0, 15.0, 22.0, 6.0, 8.0]]
+          },
+          "header": {
+              "align": "left",
+              "values": ["case", "year", "type", "latitude", "longitude", "gender", "race", "weapon_type", "weapons_obtained_legally", "prior_signs_mental_health_issues", "age_of_shooter", "location", "place", "total_victims", "injured", "fatalities"]
+          },
+          "type": "table"
+      }], {
+          "template": {
+              "data": {
+                  "barpolar": [{
+                      "marker": {
+                          "line": {"color": "#E5ECF6", "width": 0.5},
+                          "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}
+                      }, "type": "barpolar"
+                  }],
+                  "bar": [{
+                      "error_x": {"color": "#2a3f5f"},
+                      "error_y": {"color": "#2a3f5f"},
+                      "marker": {
+                          "line": {"color": "#E5ECF6", "width": 0.5},
+                          "pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}
+                      },
+                      "type": "bar"
+                  }],
+                  "carpet": [{
+                      "aaxis": {
+                          "endlinecolor": "#2a3f5f",
+                          "gridcolor": "white",
+                          "linecolor": "white",
+                          "minorgridcolor": "white",
+                          "startlinecolor": "#2a3f5f"
+                      },
+                      "baxis": {
+                          "endlinecolor": "#2a3f5f",
+                          "gridcolor": "white",
+                          "linecolor": "white",
+                          "minorgridcolor": "white",
+                          "startlinecolor": "#2a3f5f"
+                      },
+                      "type": "carpet"
+                  }],
+                  "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}],
+                  "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}],
+                  "contour": [{
+                      "colorbar": {"outlinewidth": 0, "ticks": ""},
+                      "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                      "type": "contour"
+                  }],
+                  "heatmapgl": [{
+                      "colorbar": {"outlinewidth": 0, "ticks": ""},
+                      "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                      "type": "heatmapgl"
+                  }],
+                  "heatmap": [{
+                      "colorbar": {"outlinewidth": 0, "ticks": ""},
+                      "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                      "type": "heatmap"
+                  }],
+                  "histogram2dcontour": [{
+                      "colorbar": {"outlinewidth": 0, "ticks": ""},
+                      "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                      "type": "histogram2dcontour"
+                  }],
+                  "histogram2d": [{
+                      "colorbar": {"outlinewidth": 0, "ticks": ""},
+                      "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                      "type": "histogram2d"
+                  }],
+                  "histogram": [{
+                      "marker": {"pattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2}},
+                      "type": "histogram"
+                  }],
+                  "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}],
+                  "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}],
+                  "pie": [{"automargin": true, "type": "pie"}],
+                  "scatter3d": [{
+                      "line": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                      "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                      "type": "scatter3d"
+                  }],
+                  "scattercarpet": [{
+                      "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                      "type": "scattercarpet"
+                  }],
+                  "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}],
+                  "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}],
+                  "scattermapbox": [{
+                      "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                      "type": "scattermapbox"
+                  }],
+                  "scatterpolargl": [{
+                      "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                      "type": "scatterpolargl"
+                  }],
+                  "scatterpolar": [{
+                      "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                      "type": "scatterpolar"
+                  }],
+                  "scatter": [{
+                      "fillpattern": {"fillmode": "overlay", "size": 10, "solidity": 0.2},
+                      "type": "scatter"
+                  }],
+                  "scatterternary": [{
+                      "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                      "type": "scatterternary"
+                  }],
+                  "surface": [{
+                      "colorbar": {"outlinewidth": 0, "ticks": ""},
+                      "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                      "type": "surface"
+                  }],
+                  "table": [{
+                      "cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}},
+                      "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}},
+                      "type": "table"
+                  }]
+              }, "layout": {
+                  "annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1},
+                  "autotypenumbers": "strict",
+                  "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}},
+                  "colorscale": {
+                      "diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]],
+                      "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]],
+                      "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]
+                  },
+                  "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"],
+                  "font": {"color": "#2a3f5f"},
+                  "geo": {
+                      "bgcolor": "white",
+                      "lakecolor": "white",
+                      "landcolor": "#E5ECF6",
+                      "showlakes": true,
+                      "showland": true,
+                      "subunitcolor": "white"
+                  },
+                  "hoverlabel": {"align": "left"},
+                  "hovermode": "closest",
+                  "mapbox": {"style": "light"},
+                  "paper_bgcolor": "white",
+                  "plot_bgcolor": "#E5ECF6",
+                  "polar": {
+                      "angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""},
+                      "bgcolor": "#E5ECF6",
+                      "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}
+                  },
+                  "scene": {
+                      "xaxis": {
+                          "backgroundcolor": "#E5ECF6",
+                          "gridcolor": "white",
+                          "gridwidth": 2,
+                          "linecolor": "white",
+                          "showbackground": true,
+                          "ticks": "",
+                          "zerolinecolor": "white"
+                      },
+                      "yaxis": {
+                          "backgroundcolor": "#E5ECF6",
+                          "gridcolor": "white",
+                          "gridwidth": 2,
+                          "linecolor": "white",
+                          "showbackground": true,
+                          "ticks": "",
+                          "zerolinecolor": "white"
+                      },
+                      "zaxis": {
+                          "backgroundcolor": "#E5ECF6",
+                          "gridcolor": "white",
+                          "gridwidth": 2,
+                          "linecolor": "white",
+                          "showbackground": true,
+                          "ticks": "",
+                          "zerolinecolor": "white"
+                      }
+                  },
+                  "shapedefaults": {"line": {"color": "#2a3f5f"}},
+                  "ternary": {
+                      "aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""},
+                      "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""},
+                      "bgcolor": "#E5ECF6",
+                      "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}
+                  },
+                  "title": {"x": 0.05},
+                  "xaxis": {
+                      "automargin": true,
+                      "gridcolor": "white",
+                      "linecolor": "white",
+                      "ticks": "",
+                      "title": {"standoff": 15},
+                      "zerolinecolor": "white",
+                      "zerolinewidth": 2
+                  },
+                  "yaxis": {
+                      "automargin": true,
+                      "gridcolor": "white",
+                      "linecolor": "white",
+                      "ticks": "",
+                      "title": {"standoff": 15},
+                      "zerolinecolor": "white",
+                      "zerolinewidth": 2
+                  }
+              }
+          }
+      }, {"responsive": true})
+  }
+  ;
+  </script>
 </body>
 </html>
